@@ -1,9 +1,7 @@
 {
   "customizations": {
     "codespaces": {
-      "openFiles": [
-        "README.md"
-      ]
+      "openFiles": ["README.md"]
     },
     "vscode": {
       // Set *default* container specific settings.json values on container create.
@@ -11,15 +9,21 @@
         "terminal.integrated.shell.linux": "/bin/bash"
       },
       // Add the IDs of extensions you want installed when the container is created.
-      "extensions": [
-        "GitHub.github-vscode-theme"
-        // Additional Extensions Here
-      ]
+      "extensions": ["GitHub.github-vscode-theme", "ritwickdey.LiveServer"]
     }
   },
   // Update welcome text and set terminal prompt to '$ '
   "onCreateCommand": "echo PS1='\"$ \"' >> ~/.bashrc",
-  // Pull all branches
-  "postAttachCommand": "git pull --all"
+  // Install dependencies for the auth-server
+  "postCreateCommand": "cd auth-server && npm install",
+
+  // Forward port for the auth-server and make it public
+  "forwardPorts": [3000],
+  "portsAttributes": {
+    "3000": {
+      "label": "auth-server",
+      "visibility": "public"
+    }
+  }
 }
 // DevContainer Reference: https://code.visualstudio.com/docs/remote/devcontainerjson-reference

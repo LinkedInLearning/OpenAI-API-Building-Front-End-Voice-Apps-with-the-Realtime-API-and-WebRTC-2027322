@@ -1,30 +1,37 @@
 # OpenAI API: Building Front-End Voice Apps with the Realtime API and WebRTC
 This is the repository for the LinkedIn Learning course OpenAI API: Building Front-End Voice Apps with the Realtime API and WebRTC. The full course is available from [LinkedIn Learning][lil-course-url].
 
-_See the readme file in the main branch for updated instructions and information._
 ## Instructions
-This repository has branches for each of the videos in the course. You can use the branch pop up menu in github to switch to a specific branch and take a look at the course at that stage, or you can add `/tree/BRANCH_NAME` to the URL to go to the branch you want to access.
+These exercise files are best used in GitHub Codespaces. The project contains five folders with example implementations of OpenAI's Realtime API in vanilla JavaScript:
 
-## Branches
-The branches are structured to correspond to the videos in the course. The naming convention is `CHAPTER#_MOVIE#`. As an example, the branch named `02_03` corresponds to the second chapter and the third video in that chapter. 
-Some branches will have a beginning and an end state. These are marked with the letters `b` for "beginning" and `e` for "end". The `b` branch contains the code as it is at the beginning of the movie. The `e` branch contains the code as it is at the end of the movie. The `main` branch holds the final state of the code when in the course.
+- `./01-basic-JS/`: A bare-bones reference implementation
+- `./02-audio-visualizer/`: A built-out implementation utilizing the Web Audio API for voice visualization
+- `./03-voice-and-text/`: Adds text chat input and output to the app
+- `./04-transcriptions/`: Adds the voice input and output to the text chat as transcripts
+- `./05-function-calling/`: Adds function calling
 
-When switching from one exercise files branch to the next after making changes to the files, you may get a message like this:
+## Using the Auth Server
+The project also contains a basic Node.js-based auth server to supply the front-end app with an ephemeral token for authentication. It is found in the `./auth-server/` folder. If you're running the exercise files in GitHub Codespaces, the dependencies for the auth server are automatically installed. If you're running the exercise files on your local computer, follow the steps below to install them.
 
-    error: Your local changes to the following files would be overwritten by checkout:        [files]
-    Please commit your changes or stash them before you switch branches.
-    Aborting
-
-To resolve this issue:
-	
-    Add changes to git using this command: git add .
-	Commit changes using this command: git commit -m "some message"
 
 ## Installing
-1. To use these exercise files, you must have the following installed:
-	- [list of requirements for course]
-2. Clone this repository into your local machine using the terminal (Mac), CMD (Windows), or a GUI tool like SourceTree.
-3. [Course-specific instructions]
+
+1. Open the repo in GitHub Codespaces or clone it to your computer.
+    - If you're on a local install, open terminal and run `cd auth-server && npm install` to install dependencies.
+2. Visit the [platform.openai.com](https://platform.openai.com/api-keys) to create an API key for the project.
+3. Make a copy of `/auth-server/.env-template` to create a new `.env` file in the `/auth-server/` directory with the following:
+```json
+OPENAI_API_KEY=your-api-key
+```
+4. Run the server from terminal by navigating to the `/auth-server/` directory and running 
+```bash
+node server.js
+```
+5. For Codespaces: 
+  - Go to Ports, identify the live URL for the auth server, and it to `server-config.js`.
+  - In `/01-basic-js/`, set `SERVER_URL` in `app.js` to the same auth server URL.
+6. Open `index.html` in your browser to access the all the demos.
+7. To stop the auth server, run `Ctrl+C` in the terminal.
 
 
 [0]: # (Replace these placeholder URLs with actual course URLs)

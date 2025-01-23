@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Visualizing voice with the Web Audio API</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="src/app.js" defer></script>
+</head>
+
+<body>
+  <div class="container">
+    <h1>OpenAI Realtime API with WebRTC:</h1>
+    <h2>Real-time Audio Visualization with Web Audio API</h2>
+    <div class="controls">
+      <button id="connection-button" class="btn">Create Connection</button>
+      <button id="mic-button" disabled class="btn">Unmute Mic</button>
+    </div>
+    <div id="status" class="status">Not Connected</div>
+    <div class="visualizers">
+      <div class="visualizer-container">
+        <canvas id="aiVisualizer" class="visualizer" width="600" height="200"></canvas>
+        <div class="visualizer-label">AI</div>
+      </div>
+      <div class="visualizer-container">
+        <canvas id="micVisualizer" class="visualizer" width="600" height="200"></canvas>
+        <div class="visualizer-label">Mic</div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

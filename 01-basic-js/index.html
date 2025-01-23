@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Basic OpenAI Realtime API Demo</title>
+  <script src="app.js" defer></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+    }
+
+    .status {
+      margin: 10px 0;
+      padding: 10px;
+      background: #f0f0f0;
+    }
+
+    button {
+      padding: 10px 20px;
+      margin: 5px;
+    }
+
+    h1 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: #333;
+    }
+
+    h2 {
+      margin-top: 0;
+      margin-bottom: 2rem;
+      font-size: 2rem;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>OpenAI Realtime API with WebRTC:</h1>
+  <h2>Basic Reference Implementation</h2>
+
+  <!-- Simple controls -->
+  <div>
+    <button id="connection-button">Create Connection</button>
+    <button id="mic-button" disabled>Unmute Mic</button>
+  </div>
+
+  <!-- Status display -->
+  <div id="status" class="status">Not connected</div>
+
+</body>
+
+</html>
