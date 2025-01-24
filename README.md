@@ -1,6 +1,12 @@
 # OpenAI API: Building Front-End Voice Apps with the Realtime API and WebRTC
 This is the repository for the LinkedIn Learning course OpenAI API: Building Front-End Voice Apps with the Realtime API and WebRTC. The full course is available from [LinkedIn Learning][lil-course-url].
 
+![lil-thumbnail-url]
+
+## Course Description
+
+With OpenAI’s Realtime API, you can build a custom real-time voice-to-voice AI chat into any front-end web app or other app through WebRTC. In this course, you’ll explore how the Realtime API works, see how to set up a secure WebRTC connection with ephemeral tokens, and get hands-on examples of how to add custom real-time AI chat with voice, text, and function calling into any web app using JavaScript.
+
 ## Instructions
 These exercise files are best used in GitHub Codespaces. The project contains five folders with example implementations of OpenAI's Realtime API in vanilla JavaScript:
 
@@ -33,9 +39,18 @@ node server.js
 6. Open `index.html` in your browser to access the all the demos.
 7. To stop the auth server, run `Ctrl+C` in the terminal.
 
+## Instructor
+
+Morten Rand-Hendriksen
+
+Senior Staff Instructor, Speaker, Web Designer, and Software Developer
+
+                            
+
+Check out my other courses on [LinkedIn Learning](https://www.linkedin.com/learning/instructors/morten-rand-hendriksen?u=104).
 
 [0]: # (Replace these placeholder URLs with actual course URLs)
 
-[lil-course-url]: https://www.linkedin.com/learning/
-[lil-thumbnail-url]: http://
+[lil-course-url]: https://www.linkedin.com/learning/openai-api-building-front-end-voice-apps-with-the-realtime-api-and-webrtc
+[lil-thumbnail-url]: https://media.licdn.com/dms/image/v2/D4D0DAQEYzrFcR4U6rQ/learning-public-crop_675_1200/B4DZSV4dHoG8AY-/0/1737681392392?e=2147483647&v=beta&t=XE9cChS7_B8GHyW_Bsh0TfBIKc6D39Qlex5UXTmsPM4
 
